@@ -1,0 +1,12 @@
+# Routes
+# This file defines all application routes (Higher priority routes first)
+# ~~~~
+
+# Home page
+GET     /                              controllers.Application.index
+PUT     /create/job/:jobId             controllers.Application.createJob(jobId: String)
+POST    /update/job/:jobId             controllers.Application.updateJobState(jobId: String)
+POST    /remove/job/:jobId             controllers.Application.removeJob(jobId: String)
+
+# Map static resources from the /public folder to the /assets URL path
+GET     /assets/*file               controllers.Assets.at(path="/public", file)
